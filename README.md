@@ -1,14 +1,9 @@
 # Customer-Churn-Prediction
 
-Customer Churn Prediction
-Gourav Verma
-DSC-680 302, Spring-2021
-Portfolio Page
-
-Which Domain?
+### Which Domain?
 This project aims to solve the churn problem for the banking domain. For any organization or company, customer churn is a major issue.[1] A customer leaving for another product, subscription, or service is a loss for a company. Due to the direct impact on revenue, businesses need to classify customers who are likely to churn and might leave their services in near future. Apart from just recognizing the customers, they also need to identify the reason for churn, to offer them personalized perks. With the help of data mining and machine learning, we can predict the customers at the risk of churning. I am planning to perform two deliverables in this project. First, to predict bank customers likely to churn with the help of supervised learning and customer segmentation using unsupervised learning. There can be many factors causing customer churn, internal and external. In this project, I will try to find the probable reason for churning with the available data.
   
-Which Data?
+### Which Data?
 The source of bank data is Kaggle.[2] This dataset contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his account) or he/she continues to be a customer. The dataset contains 10,000 records with 14 columns. There are no missing values. Demographically the information is about customers from Spain, France, and Germany. 55% of customers are Male, and 45% are Female, with an average age of 38.9 years. Exited is the outcome (churn) variable. 
 The churn dataset contains below columns - 
 
@@ -36,7 +31,7 @@ dtypes: float64(2), int64(9), object(3)
 Heatmap to find correlation between different variables in the dataset. Exited variable is positively correlated with Age and Balance.
 
 
-Research Questions? Benefits? Why analyzes these data?
+### Research Questions? Benefits? Why analyzes these data?
 It is common among many organizations to focus more on attracting new customers rather than retaining the current ones. It could take a serious toll on the company’s revenue and overall profit margins. As per the mixpanel blog post [3], 97% of customers churn silently without providing any explanation. It is tough for a company to keep up with customer churn and make a profit at the same time. The lifetime value of the customer is measured by the total net income of the company from the customer over his lifetime.[6] With churn analysis, we can measure each customer’s value and cost to retain them.  There are many benefits of churn analysis:
 -	Increase customer retention.
 -	Increase profit margins.
@@ -45,18 +40,18 @@ It is common among many organizations to focus more on attracting new customers 
 -	Lower marketing cost.
 
 
-What Method?
-I will start with EDA by exploring summary statistics of data. Planning to do visualization for correlation between variables, exited, vs tenure, gender, age, estimated salary, etc. Based on the analysis, the data will be cleaned and prepared for modeling. Before model implementation, the dataset will be split into test and train sets. 
-For classification, I will be using Scikit-learn [4] K nearest neighbor, Artificial Neural Network, Random Forest, Gradient boosting, and XGB classifier. All the classifiers will be evaluated for their performance. Using sklearn’s [5] GridSearchCV, planning to tune and cross-validate the models. AUC curve will be drawn, to correctly estimate the ability of the model. I will also be testing the model using either precision-recall or ROC curve, depending upon the balancing of the observations. If they are balanced between the class, then ROC will be used, otherwise precision-recall.
-For segmentation, I am planning to use K means clustering by deciding the value of K using the elbow method. 
+### What Method?
+	I will start with EDA by exploring summary statistics of data. Planning to do visualization for correlation between variables, exited, vs tenure, gender, age, estimated salary, etc. Based on the analysis, the data will be cleaned and prepared for modeling. Before model implementation, the dataset will be split into test and train sets. 
+	For classification, I will be using Scikit-learn [4] K nearest neighbor, Artificial Neural Network, Random Forest, Gradient boosting, and XGB classifier. All the classifiers will be evaluated for their performance. Using sklearn’s [5] GridSearchCV, planning to tune and cross-validate the models. AUC curve will be drawn, to correctly estimate the ability of the model. I will also be testing the model using either precision-recall or ROC curve, depending upon the balancing of the observations. If they are balanced between the class, then ROC will be used, otherwise precision-recall.
+	For segmentation, I am planning to use K means clustering by deciding the value of K using the elbow method. 
 
-Potential Issues?
-The main concern would be the selection of the best method to choose from. For the churn analysis, many approaches can be used, which can provide higher accuracy. Each uses different data structures and has different data selection procedures. Selecting a method with high accuracy and less train time would be the ultimate goal.
+### Potential Issues?
+	The main concern would be the selection of the best method to choose from. For the churn analysis, many approaches can be used, which can provide higher accuracy. Each uses different data structures and has different data selection procedures. Selecting a method with high accuracy and less train time would be the ultimate goal.
 
-Concluding Remarks
+### Concluding Remarks
 	In the financial and commercial world, machine learning has gotten extensive interest due to its capability of converting raw customer data into useful information.[8] These efforts can easily fail short due to customer churning. So, it is important to focus on customers identified by the churn model. Bank and other financial institutions can greatly benefit from churn analysis. With this research, I will be trying to do customer churn prediction using data mining techniques and gain useful insights from customer’s raw information. 
 
-References:
+### References:
 1.	What is Churn Analytics? (n.d.). Retrieved from https://mixpanel.com/topics/churn-analytics/ 
 2.	Shruti_Iyyer. (2019, April 03). Churn Modelling. Retrieved from https://www.kaggle.com/shrutimechlearn/churn-modelling?select=Churn_Modelling.csv 
 3.	97% of users churn silently - here's why. (2020, July 24). Retrieved from https://mixpanel.com/blog/understanding-churn/ 
