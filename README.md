@@ -7,14 +7,13 @@ This project aims to solve the churn problem for the banking domain. For any org
 The source of bank data is Kaggle.[2] This dataset contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his account) or he/she continues to be a customer. The dataset contains 10,000 records with 14 columns. There are no missing values. Demographically the information is about customers from Spain, France, and Germany. 55% of customers are Male, and 45% are Female, with an average age of 38.9 years. Exited is the outcome (churn) variable. 
 The churn dataset contains below columns - 
 
-<class 'pandas.core.frame.DataFrame'>
 RangeIndex: 10000 entries, 0 to 9999
 Data columns (total 14 columns):
  #   Column           Non-Null Count  Dtype  
 ---  ------           --------------  -----  
- 0   RowNumber        10000 non-null  int64  
- 1   CustomerId       10000 non-null  int64  
- 2   Surname          10000 non-null  object 
+ 0   RowNumber        |10000 non-null  int64  
+ 1   CustomerId       |10000 non-null  int64  
+ 2   Surname          |10000 non-null  object 
  3   CreditScore      10000 non-null  int64  
  4   Geography        10000 non-null  object 
  5   Gender           10000 non-null  object 
@@ -41,15 +40,15 @@ It is common among many organizations to focus more on attracting new customers 
 
 
 ### What Method?
-	I will start with EDA by exploring summary statistics of data. Planning to do visualization for correlation between variables, exited, vs tenure, gender, age, estimated salary, etc. Based on the analysis, the data will be cleaned and prepared for modeling. Before model implementation, the dataset will be split into test and train sets. 
-	For classification, I will be using Scikit-learn [4] K nearest neighbor, Artificial Neural Network, Random Forest, Gradient boosting, and XGB classifier. All the classifiers will be evaluated for their performance. Using sklearn’s [5] GridSearchCV, planning to tune and cross-validate the models. AUC curve will be drawn, to correctly estimate the ability of the model. I will also be testing the model using either precision-recall or ROC curve, depending upon the balancing of the observations. If they are balanced between the class, then ROC will be used, otherwise precision-recall.
-	For segmentation, I am planning to use K means clustering by deciding the value of K using the elbow method. 
+I will start with EDA by exploring summary statistics of data. Planning to do visualization for correlation between variables, exited, vs tenure, gender, age, estimated salary, etc. Based on the analysis, the data will be cleaned and prepared for modeling. Before model implementation, the dataset will be split into test and train sets. 
+For classification, I will be using Scikit-learn [4] K nearest neighbor, Artificial Neural Network, Random Forest, Gradient boosting, and XGB classifier. All the classifiers will be evaluated for their performance. Using sklearn’s [5] GridSearchCV, planning to tune and cross-validate the models. AUC curve will be drawn, to correctly estimate the ability of the model. I will also be testing the model using either precision-recall or ROC curve, depending upon the balancing of the observations. If they are balanced between the class, then ROC will be used, otherwise precision-recall.
+For segmentation, I am planning to use K means clustering by deciding the value of K using the elbow method. 
 
 ### Potential Issues?
-	The main concern would be the selection of the best method to choose from. For the churn analysis, many approaches can be used, which can provide higher accuracy. Each uses different data structures and has different data selection procedures. Selecting a method with high accuracy and less train time would be the ultimate goal.
+The main concern would be the selection of the best method to choose from. For the churn analysis, many approaches can be used, which can provide higher accuracy. Each uses different data structures and has different data selection procedures. Selecting a method with high accuracy and less train time would be the ultimate goal.
 
 ### Concluding Remarks
-	In the financial and commercial world, machine learning has gotten extensive interest due to its capability of converting raw customer data into useful information.[8] These efforts can easily fail short due to customer churning. So, it is important to focus on customers identified by the churn model. Bank and other financial institutions can greatly benefit from churn analysis. With this research, I will be trying to do customer churn prediction using data mining techniques and gain useful insights from customer’s raw information. 
+In the financial and commercial world, machine learning has gotten extensive interest due to its capability of converting raw customer data into useful information.[8] These efforts can easily fail short due to customer churning. So, it is important to focus on customers identified by the churn model. Bank and other financial institutions can greatly benefit from churn analysis. With this research, I will be trying to do customer churn prediction using data mining techniques and gain useful insights from customer’s raw information. 
 
 ### References:
 1.	What is Churn Analytics? (n.d.). Retrieved from https://mixpanel.com/topics/churn-analytics/ 
