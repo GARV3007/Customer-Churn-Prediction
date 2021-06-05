@@ -5,30 +5,6 @@ This project aims to solve the churn problem for the banking domain. For any org
   
 ### Which Data?
 The source of bank data is Kaggle.[2] This dataset contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his account) or he/she continues to be a customer. The dataset contains 10,000 records with 14 columns. There are no missing values. Demographically the information is about customers from Spain, France, and Germany. 55% of customers are Male, and 45% are Female, with an average age of 38.9 years. Exited is the outcome (churn) variable. 
-The churn dataset contains below columns - 
-
-RangeIndex: 10000 entries, 0 to 9999
-Data columns (total 14 columns):
- #   Column           Non-Null Count  Dtype  
----  ------           --------------  -----  
- 0   RowNumber        |10000 non-null  int64  
- 1   CustomerId       |10000 non-null  int64  
- 2   Surname          |10000 non-null  object 
- 3   CreditScore      10000 non-null  int64  
- 4   Geography        10000 non-null  object 
- 5   Gender           10000 non-null  object 
- 6   Age              10000 non-null  int64  
- 7   Tenure           10000 non-null  int64  
- 8   Balance          10000 non-null  float64
- 9   NumOfProducts    10000 non-null  int64  
- 10  HasCrCard        10000 non-null  int64  
- 11  IsActiveMember   10000 non-null  int64  
- 12  EstimatedSalary  10000 non-null  float64
- 13  Exited           10000 non-null  int64  
-dtypes: float64(2), int64(9), object(3)
-
-Heatmap to find correlation between different variables in the dataset. Exited variable is positively correlated with Age and Balance.
-
 
 ### Research Questions? Benefits? Why analyzes these data?
 It is common among many organizations to focus more on attracting new customers rather than retaining the current ones. It could take a serious toll on the company’s revenue and overall profit margins. As per the mixpanel blog post [3], 97% of customers churn silently without providing any explanation. It is tough for a company to keep up with customer churn and make a profit at the same time. The lifetime value of the customer is measured by the total net income of the company from the customer over his lifetime.[6] With churn analysis, we can measure each customer’s value and cost to retain them.  There are many benefits of churn analysis:
